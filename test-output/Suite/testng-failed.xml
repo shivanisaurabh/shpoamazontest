@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="methods">
+  <listeners>
+    <listener class-name="report.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="2" name="Test(failed)" parallel="methods">
+    <classes>
+      <class name="test.CheckoutTest">
+        <methods>
+          <include name="ProceedToCart"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- test.CheckoutTest -->
+      <class name="test.CartTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="setup"/>
+          <include name="addtocart"/>
+        </methods>
+      </class> <!-- test.CartTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
